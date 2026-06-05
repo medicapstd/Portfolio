@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mridul Soliwal - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            color: #1a1a2e;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .resume {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px 60px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #0d9488;
+            padding-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #0f172a;
+        }
+
+        .header .tagline {
+            font-size: 15px;
+            color: #0d9488;
+            font-weight: 500;
+            margin-top: 4px;
+            letter-spacing: 1px;
+        }
+
+        .header .contact-info {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #475569;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 20px;
+        }
+
+        .header .contact-info a {
+            color: #0d9488;
+            text-decoration: none;
+        }
+
+        .header .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #0d9488;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+
+        /* Summary */
+        .summary p {
+            font-size: 14px;
+            color: #334155;
+            line-height: 1.7;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 30px;
+        }
+
+        .skill-category {
+            font-size: 14px;
+        }
+
+        .skill-category strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .skill-category span {
+            color: #475569;
+        }
+
+        /* Experience / Education */
+        .entry {
+            margin-bottom: 18px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .entry-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .entry-subtitle {
+            font-size: 13px;
+            color: #0d9488;
+            font-weight: 500;
+        }
+
+        .entry-date {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+
+        .entry ul {
+            margin-top: 6px;
+            padding-left: 18px;
+        }
+
+        .entry li {
+            font-size: 13.5px;
+            color: #334155;
+            margin-bottom: 4px;
+            line-height: 1.6;
+        }
+
+        /* Projects */
+        .project-tech {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .project-link {
+            font-size: 12px;
+        }
+
+        .project-link a {
+            color: #0d9488;
+            text-decoration: none;
+        }
+
+        .project-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Print */
+        @media print {
+            body {
+                padding: 0;
+                background: #fff;
+            }
+
+            .resume {
+                box-shadow: none;
+                padding: 30px 40px;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        /* Download Button */
+        .download-btn {
+            display: block;
+            max-width: 200px;
+            margin: 20px auto;
+            padding: 12px 24px;
+            background: #0d9488;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #0f766e;
+        }
+
+        @media (max-width: 600px) {
+            .resume {
+                padding: 30px 25px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .entry-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume" id="resume">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h1>Mridul Soliwal</h1>
+            <div class="tagline">Python Developer · AI & Machine Learning Enthusiast</div>
+            <div class="contact-info">
+                <span>📧 <a href="mailto:mridulsoliwal42@gmail.com">mridulsoliwal42@gmail.com</a></span>
+                <span>🔗 <a href="https://github.com/Mridul-SOl" target="_blank">github.com/Mridul-SOl</a></span>
+                <span>🔗 <a href="https://www.linkedin.com/in/mridulsoliwal8748"
+                        target="_blank">linkedin.com/in/mridulsoliwal8748</a></span>
+            </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="section summary">
+            <div class="section-title">About Me</div>
+            <p>
+                I'm a Python developer who loves building backend systems and exploring AI.
+                I work with tools like FastAPI, PostgreSQL, and Docker to create real, working apps.
+                I enjoy learning new things and turning ideas into clean, useful software.
+            </p>
+        </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <div class="skill-category"><strong>Languages:</strong> <span>Python, TypeScript, JavaScript, SQL</span>
+            </div>
+            <div class="skill-category"><strong>Backend:</strong> <span>FastAPI, Flask, REST APIs, SQLModel</span>
+            </div>
+            <div class="skill-category"><strong>Frontend:</strong> <span>React, Next.js, Tailwind CSS,
+                    HTML/CSS</span></div>
+            <div class="skill-category"><strong>Databases:</strong> <span>PostgreSQL, SQLite, MongoDB</span></div>
+            <div class="skill-category"><strong>AI/ML:</strong> <span>Scikit-learn, Pandas, NumPy, Vosk</span></div>
+            <div class="skill-category"><strong>DevOps:</strong> <span>Docker, AWS, Git, Linux</span></div>
+            <div class="skill-category"><strong>Tools:</strong> <span>VS Code, Postman, GitHub Actions</span></div>
+            <div class="skill-category"><strong>Concepts:</strong> <span>OOP, REST, Agile, CI/CD, MVC</span></div>
+        </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+        <div class="section-title">Projects</div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">SubsiGuard — Fraud Detection App</span>
+                <span class="entry-date">Feb 2026</span>
+            </div>
+            <div class="project-tech">FastAPI · Next.js 15 · Scikit-learn · Pandas · SQLite · Tailwind CSS</div>
+            <ul>
+                <li>Built a full-stack app that helps find fraud in Indian government subsidy programs like PDS and
+                    PM-KISAN.</li>
+                <li>Used machine learning (Isolation Forest) along with custom rules to catch suspicious cases
+                    automatically.</li>
+                <li>Made a dashboard with charts, maps, and filters so users can easily see and explore the results.
+                </li>
+                <li>Added a tool that creates fake test data so you can try the app without needing real data.</li>
+            </ul>
+            <div class="project-link"><a href="https://github.com/Mridul-SOl/SubsiGuard" target="_blank">GitHub</a> · <a
+                    href="https://subsi-guard.vercel.app" target="_blank">Live Demo</a></div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Jarvis AI — Voice Assistant</span>
+                <span class="entry-date">2025 – Present</span>
+            </div>
+            <div class="project-tech">Python · Vosk · pyttsx3 · SpeechRecognition</div>
+            <ul>
+                <li>Made a voice assistant that listens to you and does tasks — all without needing the internet.</li>
+                <li>Used Vosk for offline speech recognition so it works fast and keeps your data private.</li>
+                <li>Added text-to-speech so the assistant can talk back to you.</li>
+            </ul>
+            <div class="project-link"><a href="https://github.com/Mridul-SOl" target="_blank">GitHub</a></div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Hotel Management System</span>
+                <span class="entry-date">2025</span>
+            </div>
+            <div class="project-tech">Python · PostgreSQL</div>
+            <ul>
+                <li>Built a command-line app to manage hotel guests, staff, and room bookings.</li>
+                <li>Organized the code into clean, separate files (guest, staff, database) so it's easy to update.</li>
+                <li>Connected it to PostgreSQL to store all the data reliably.</li>
+            </ul>
+            <div class="project-link"><a href="https://github.com/Mridul-SOl" target="_blank">GitHub</a></div>
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">BCA (Bachelor of Computer Applications)</span>
+                <span class="entry-date">2023 – Present</span>
+            </div>
+            <div class="entry-subtitle">Computer Science</div>
+            <ul>
+                <li>Learning programming, databases, and how software systems work.</li>
+                <li>Building real projects on the side to practice what I learn in class.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- INTERESTS -->
+    <div class="section">
+        <div class="section-title">Interests</div>
+        <p style="font-size: 14px; color: #475569;">
+            AI & Machine Learning · Building APIs · Open Source · Problem Solving ·
+            Making Developer Tools · Cloud & DevOps
+        </p>
+    </div>
+
+    </div>
+
+    <!-- Download Button -->
+    <button class="download-btn no-print" onclick="window.print()">📄 Download as PDF</button>
+
+</body>
+
+</html>
